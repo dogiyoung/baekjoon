@@ -1,2 +1,3 @@
 # baekjoon
-baekjoon코드 모
+baekjoon코드 모음
+
