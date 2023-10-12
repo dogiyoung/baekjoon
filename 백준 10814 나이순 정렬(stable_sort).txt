@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+#include<algorithm>
+#include <string>
+using namespace std;
+
+bool cmp(pair<int,string>p1,pair<int,string>p2) {
+	
+	return p1.first < p2.first;
+}
+
+int main() {
+	int n,a;
+	string s;
+	cin >> n;
+	vector<pair<int,string>>v;
+	for (int i = 0; i < n; i++) {
+		cin >> a >> s;
+		v.push_back(make_pair(a, s));
+	}
+	stable_sort(v.begin(), v.end(), cmp);	// stable_sort 사용하면 같은 값 비교시 원소의 순서가 처음과 같음
+	
+
+	for (int i = 0; i < n; i++) {
+		cout << v[i].first <<" "<<v[i].second<< "\n";
+	}
+
+	return 0;
+}
